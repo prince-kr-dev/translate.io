@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate.IO</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    
+    <div id="main">
+        <div id="dictionary">
+            <i id="close" class="ri-close-large-line"></i>
+            <h1>Dictionary</h1>
+            <div id="ip-div">
+                <input type="text" placeholder="Search for any word...">
+                <i id="search" class="ri-search-line"></i>
+            </div>
+            <div id="word-listen">
+                <h2></h2>
+            </div>
+            <h3></h3>
+            <h4></h4>
+            <h5>Meaning</h5>
+            <ul>
+                <li id="li1"></li>
+                <li id="li2"></li>
+                <li id="li3"></li>
+            </ul>
+            <h6></h6>
+        </div>
+        <nav>
+            <h1>Translate.IO</h1>
+            <h2>English to Hindi</h2>
+            <div id="dBtn">← Open Dictionary</div>
+        </nav>
+        <div id="center">
+            <div class="container">
+                <div class="top">
+                    <div class="left">
+                        <textarea placeholder="Enter text [500]" id="iptext" rows="17" cols="60"></textarea>
+                    </div>
+                    
+                    <div class="right">
+                        <textarea name="" id="optext" rows="17" cols="60" readonly></textarea>
+                    </div>
+                </div>
+                <button id="translateBtn">Translate Language</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

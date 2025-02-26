@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: "Ubuntu", serif;
+}
+body{
+    overflow: hidden;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    height: 10%;
+    width: 100%;
+    background-color: azure;
+    border-bottom: 1px solid rgb(44, 126, 126);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10vw;
+}
+nav h1{
+    font-size: 2.5vw;
+    color: rgb(0, 51, 51);
+}
+nav h2{
+    font-size: 2vw;
+    color: rgb(0, 51, 51);
+}
+nav #dBtn{
+    font-size: 1.5vw;
+    color: rgb(0, 51, 51);
+    text-decoration: none;
+    border: 1px solid rgb(0, 51, 51);
+    padding: 0.2vw 1vw;
+    border-radius: 0.5vw;
+    transition: all ease 0.2s
+}
+#dBtn:hover{
+    cursor: pointer;
+    background-color: rgba(0, 51, 51, 0.336);
+}
+
+
+#center{
+    height: 90%;
+    width: 100%;
+    /* background-color: chocolate ; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    height: 90%;
+    width: 80%;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1vw;
+    border-radius: 1.8vw;
+    border: 1px solid rgb(44, 126, 126);
+}
+.container .left{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.top{
+    display: flex;
+    gap: 1.7vw;
+}
+#language-ip{
+    height: 2vw;
+    width: 10vw;
+    border: 1px solid rgb(44, 153, 255);
+    border-radius: 0.4vw;
+}
+
+.container .right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1vw;
+}
+#language-op{
+    height: 2vw;
+    width: 10vw;
+    border: 1px solid rgb(44, 153, 255);
+    border-radius: 0.4vw;
+}
+
+textarea{
+    resize: none;
+    border:1px solid rgb(44, 126, 126);
+    outline: none;
+    border-radius: 1vw;
+    padding: 1vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    height: 28vw;
+    width: 38vw;
+    line-height: 1.8vw;
+    color: rgb(37, 37, 37);
+}
+button{
+    height: 3vw;
+    width: 40vw;
+    margin: auto;
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg,rgb(70, 6, 143), rgb(44, 153, 255));
+    border-radius: 1vw;
+    font-size: 1.4vw;
+    font-weight: 500;
+    color: azure;
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+#dictionary{
+    height: 100%;
+    width: 30%;
+    background-color: azure;
+    position: absolute;
+    right: 0%;
+    padding: 2vw 3vw;
+    border-left:1px solid rgb(0, 51, 51);
+    transition: all ease-out 0.5s;
+    display: none;
+}
+#close{
+    font-size: 2vw;
+    background-color: rgba(0, 51, 51, 0.281);
+    padding: 0.2vw 2vw;
+    border: 1px solid rgb(0, 51, 51);
+    border-radius: 0.5vw;
+}
+#dictionary h1{
+    font-size: 3vw;
+    margin: 2vw 0 2vw 0;
+    color: rgb(0, 51, 51);
+}
+#ip-div{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(44, 126, 126);
+    border-radius: 0.5vw;
+    position: relative;
+    margin-bottom: 2vw;
+}
+#ip-div input{
+    outline: none;
+    border-radius: 0.5vw;
+    height: 2vw;
+    border: none;
+    width: 100%;
+    font-size: 1vw;
+    font-weight: 500;
+    padding: 0 0.5vw;
+}
+#ip-div i{
+    position: absolute;
+    right: 0%;
+    background-color: rgba(44, 126, 126, 0.356);
+    padding: 0.4vw 1vw;
+    border-radius:0.4vw;
+}
+
+#dictionary #word-listen{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#word-listen h2{
+    color: rgb(0, 51, 51);
+    font-size: 2vw;
+}
+#word-listen i{
+    border: 2px solid rgb(0, 51, 51);
+    color: rgb(0, 51, 51);
+    background-color: rgba(0, 51, 51, 0.288);
+    padding: 0.5vw;
+    border-radius: 3vw;
+}
+#word-listen i:hover{
+    cursor: pointer;
+}
+#dictionary h3{
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 2vw;
+}
+#dictionary h4{
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: 2vw;
+}
+#dictionary h5{
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-bottom: 0.5vw;
+}
+#dictionary ul{
+    font-size: 1vw;
+    font-weight: 400;
+    margin-bottom: 2vw;
+    margin-left: 1.5vw;
+}
+#dictionary li{
+    margin-bottom: 0.5vw;
+}
+
+#dictionary h6{
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-bottom: 0.5vw;
+}
+
+@media (max-width:600px) {
+    #main{
+        height: 100%;
+        width: 100%;
+    }
+    nav{
+        height: 7%;
+    }
+    nav h1{
+        font-size: 5vw;
+    }
+    nav h2{
+        display: none;
+    }
+    nav #dBtn{
+        font-size: 3vw;
+        padding: 1vw 5vw;
+        border-radius: 1vw;
+    }
+    
+    .container{
+        height: 95%;
+        width: 90%;
+        display: flex;
+        padding: 2vw;
+        border-radius: 4vw;
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25vw;
+        position: relative;
+    }
+    textarea{
+        border-radius: 3vw;
+        padding: 3vw 2vw;
+        font-size: 4vw;
+        line-height: 5vw;
+        height: 60vw;
+        width: 85vw;
+    }
+    button{
+        height: 10vw;
+        width: 70vw;
+        background: linear-gradient(90deg,rgb(70, 6, 143), rgb(44, 153, 255));
+        border-radius: 1.5vw;
+        font-size: 4vw;
+        font-weight: 700;
+        position: absolute;
+        top: 85vw;
+        left: 15vw;
+    }
+
+    #dictionary{
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        background-color: azure;
+        position: absolute;
+        padding: 10vw;
+        border-left:1px solid rgb(0, 51, 51);
+        transition: all ease-out 0.5s;
+        display: none;
+    }
+    #close{
+        font-size: 5vw;
+        padding: 2vw 10vw;
+        border-radius: 1vw;
+    }
+    #dictionary h1{
+        font-size: 8vw;
+        margin: 5vw 0 5vw 0;
+    }
+    #ip-div{
+        width: 100%;
+        border-radius: 2vw;
+    }
+    #ip-div input{
+        border-radius: 5vw;
+        height: 8vw;
+        padding: 0 2.5vw;
+        font-size: 4vw;
+        font-weight: 800;
+        color: rgb(0, 51, 51);
+    }
+    #ip-div i{
+        padding: 2vw 7vw;
+        border-radius: 2vw;
+    }
+    #word-listen h2{
+        margin-top: 5vw;
+        font-size: 10vw;
+        margin-bottom: 3vw;
+    }
+    #dictionary h3{
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+    #dictionary h4{
+        font-size: 4vw;
+        margin-bottom: 10vw;
+    }
+    #dictionary h5{
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+    #dictionary ul{
+        font-size: 3vw;
+        margin-bottom: 4vw;
+        margin-left: 3vw;
+    }
+    #dictionary li{
+        margin-bottom: 2vw;
+    }
+    
+    #dictionary h6{
+        font-size: 5vw;
+        margin-top: 5vw;
+    }
+}
